@@ -32,7 +32,7 @@ export const fetchProductsByFilters = createAsyncThunk(
     if (limit) query.append("limit", limit);
 
     const response = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/products?${query.toString()}`
+      `${process.env.REACT_APP_BACKEND_URL}api/products?${query.toString()}`
     );
     return response.data;
   }
@@ -42,7 +42,7 @@ export const fetchProductDetails = createAsyncThunk(
   "products/fetchProductDetails",
   async (id) => {
     const response = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/products/${id}`
+      `${process.env.REACT_APP_BACKEND_URL}api/products/${id}`
     );
     return response.data;
   }
