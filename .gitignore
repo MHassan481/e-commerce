@@ -1,0 +1,18 @@
+# Logs
+logs
+*.logs
+
+
+# Node Modules
+client-ui/node_modules
+server/node_modules
+
+
+# Environment Variables
+client-ui/.env
+server/.env
+
+
+Thumbs.db
+desktop.ini
+ehthumbs.db
