@@ -7,18 +7,14 @@ dotenv.config();
 const app = express();
 connectToDatabase();
 
-
-
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "https://e-commerce-dbta.vercel.app" }));
 
 const port = process.env.PORT || 9000;
 
 app.get("/", (req, res) => {
   res.send("Wellcom to E-Commerce!");
 });
-
-
 
 import userRoutes from "./routes/userRoutes.js";
 app.use("/api/users", userRoutes);
@@ -33,14 +29,10 @@ app.use("/api/orders", orderRoutes);
 import subscribeRoutes from "./routes/subscribeRoutes.js";
 app.use("/api/subscribe", subscribeRoutes);
 
-
 //Admin
 import adminRoutes from "./routes/adminRoutes.js";
 app.use("/api/admin", adminRoutes);
 
-
 app.listen(port, () => {
   console.log(`✅ Server is running on http://localhost:${port}`);
 });
-
-
