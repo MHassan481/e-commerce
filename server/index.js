@@ -10,7 +10,7 @@ connectToDatabase();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://e-commerce-14wa.vercel.app/",
+    origin: "https://e-commerce-14wa.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
