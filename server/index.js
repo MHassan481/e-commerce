@@ -8,7 +8,12 @@ const app = express();
 connectToDatabase();
 
 app.use(express.json());
-app.use(cors({ origin: "https://e-commerce-dbta.vercel.app" }));
+app.use(
+  cors({
+    origin: "https://e-commerce-dbta.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 const port = process.env.PORT || 9000;
 
