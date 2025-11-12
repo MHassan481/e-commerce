@@ -55,7 +55,7 @@ const EditedProduct = () => {
     try {
       setUploading(true);
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/upload`,
+        `${process.env.REACT_APP_BACKEND_URL}api/upload`,
         formData,
         {
           headers: {

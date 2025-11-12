@@ -27,7 +27,7 @@ const Home = () => {
     const fetchbestSeller = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/products/best-seller`
+          `${process.env.REACT_APP_BACKEND_URL}api/products/best-seller`
         );
         setBestSellerProduct(response.data);
       } catch (error) {

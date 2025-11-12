@@ -6,7 +6,7 @@ export const createCheckout = createAsyncThunk(
   async (checkoutData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/checkout`,
+        `${process.env.REACT_APP_BACKEND_URL}api/checkout`,
         checkoutData,
         {
             headers:{

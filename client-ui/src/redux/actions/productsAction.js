@@ -52,7 +52,7 @@ export const updateProduct = createAsyncThunk(
   "products/updateProduct",
   async ({ id, productData }) => {
     const response = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/api/products/${id}`,
+      `${process.env.REACT_APP_BACKEND_URL}api/products/${id}`,
       productData,
       {
         headers: {
@@ -69,7 +69,7 @@ export const fetchSimilarProducts = createAsyncThunk(
   "products/fetchSimilarProducts",
   async ({id}) => {
     const response = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/products/similar/${id}`
+      `${process.env.REACT_APP_BACKEND_URL}api/products/similar/${id}`
     );
     return response.data;
   }

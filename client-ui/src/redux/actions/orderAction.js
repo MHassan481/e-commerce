@@ -6,7 +6,7 @@ export const fetchUserOrder = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
         const response = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/orders/my-orders`,
+        `${process.env.REACT_APP_BACKEND_URL}api/orders/my-orders`,
         {
             headers:{
                 Authorization: `Bearer ${localStorage.getItem("userToken")}`,
@@ -27,7 +27,7 @@ export const fetchOrderDetail = createAsyncThunk(
   async (orderId, { rejectWithValue }) => {
     try {
         const response = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/orders/${orderId}`,
+        `${process.env.REACT_APP_BACKEND_URL}api/orders/${orderId}`,
         {
             headers:{
                 Authorization: `Bearer ${localStorage.getItem("userToken")}`,

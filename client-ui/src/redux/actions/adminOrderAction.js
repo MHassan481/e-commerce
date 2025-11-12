@@ -6,7 +6,7 @@ export const fetchAllOrders = createAsyncThunk(
   async (_,{rejectWithValue}) => {
     try {
         const response = await axios.get(
-            `${process.env.REACT_APP_BACKEND_URL}/api/admin/orders`,
+            `${process.env.REACT_APP_BACKEND_URL}api/admin/orders`,
            {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("userToken")}`,
@@ -26,7 +26,7 @@ export const updateOrderStatus = createAsyncThunk(
   async ({id,status},{rejectWithValue}) => {
     try { 
         const response = await axios.put(
-            `${process.env.REACT_APP_BACKEND_URL}/api/admin/orders/${id}`,
+            `${process.env.REACT_APP_BACKEND_URL}api/admin/orders/${id}`,
             {status},
            {
       headers: {
@@ -48,7 +48,7 @@ export const deleteOrder = createAsyncThunk(
   async (id,{rejectWithValue}) => {
     try {
         await axios.delete(
-            `${process.env.REACT_APP_BACKEND_URL}/api/admin/orders/${id}`,
+            `${process.env.REACT_APP_BACKEND_URL}api/admin/orders/${id}`,
            {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("userToken")}`,
